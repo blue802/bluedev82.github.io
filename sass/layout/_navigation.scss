@@ -1,0 +1,81 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navigation-height;
+  background-color: rgba($white, 0.8);
+  z-index: 10;
+  backdrop-filter: blur(2px);
+
+  .navbar {
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      padding: 0 2rem;
+    }
+
+    @include breakpoint(md) {
+      padding: 0 3rem;
+    }
+
+    @include breakpoint(lg) {
+      max-width: 75rem;
+      margin: 0 auto;
+    }
+
+    &__logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    &__btn {
+      position: relative;
+      cursor: pointer;
+      width: 28px;
+      height: 32px;
+
+      span,
+      &:after,
+      &:before {
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: $primary;
+        transition: all 0.2s;
+      }
+
+      span {
+        top: 15px;
+      }
+
+      &:before {
+        content: "";
+        top: 4px;
+      }
+
+      &:after {
+        content: "";
+        top: 26px;
+      }
+
+      &:hover {
+        &::before {
+          top: 7px;
+        }
+
+        &::after {
+          top: 23px;
+        }
+      }
+    }
+  }
+}

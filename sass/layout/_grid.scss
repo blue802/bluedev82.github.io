@@ -1,0 +1,12 @@
+.grid {
+  columns: 1;
+  column-gap: 1.5rem;
+
+  @include breakpoint(md) {
+    columns: 2;
+  }
+
+  @include breakpoint(xl) {
+    columns: 3;
+  }
+}

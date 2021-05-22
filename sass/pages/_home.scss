@@ -1,0 +1,175 @@
+body {
+  margin-top: $navigation-height;
+}
+
+.main {
+  padding: 1rem;
+  overflow: hidden;
+
+  @include breakpoint(sm) {
+    padding: 1rem 2rem;
+  }
+
+  @include breakpoint(md) {
+    padding: 1rem 3rem;
+  }
+
+  @include breakpoint(lg) {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+
+  .about,
+  .contact {
+    padding-top: 8rem;
+
+    &__heading {
+      padding-bottom: 2rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__desc {
+      font-size: 1.1rem;
+      font-weight: $fw-medium;
+      color: $secondary;
+    }
+  }
+
+  .about {
+    @include breakpoint(md) {
+      &__body {
+        display: flex;
+      }
+
+      &__text,
+      &__img {
+        flex: 1;
+      }
+
+      &__text {
+        padding-left: 5rem;
+      }
+    }
+
+    figure.about__img {
+      position: relative;
+      height: fit-content;
+
+      figcaption {
+        position: absolute;
+        top: 55%;
+        right: -1rem;
+        background-color: $crimson;
+        padding: 1rem 1.6rem;
+        color: $white;
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: $fw-medium;
+          letter-spacing: 1px;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        @include breakpoint(sm) {
+          figcaption {
+            padding: 1.2rem 2rem;
+
+            h3 {
+              font-size: 1.5rem;
+            }
+
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    &__bio,
+    &__work {
+      h3 {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+      }
+    }
+
+    &__bio {
+      padding-bottom: 2rem;
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+
+    &__work-list .work-item {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .contact {
+    text-align: center;
+
+    &__body {
+      text-align: left;
+      line-height: 2;
+
+      p {
+        font-size: 1rem;
+        font-weight: $fw-regular;
+        color: $cyan;
+
+        span {
+          font-weight: $fw-medium;
+        }
+      }
+
+      h4 {
+        margin-top: 1rem;
+      }
+    }
+
+    &__icons {
+      width: fit-content;
+      display: flex;
+      justify-content: space-around;
+      padding-top: 0.5rem;
+      padding-bottom: 1rem;
+
+      .icon-social {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 3rem 0;
+  background-color: $secondary;
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: $fw-medium;
+    color: $gray;
+
+    a {
+      transition: all 0.4s;
+
+      &:hover {
+        font-weight: $fw-bold;
+        color: $white;
+      }
+    }
+  }
+}
