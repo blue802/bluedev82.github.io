@@ -20,7 +20,8 @@ body {
   }
 
   .about,
-  .contact {
+  .contact,
+  .skills {
     padding-top: 8rem;
 
     &__heading {
@@ -36,6 +37,8 @@ body {
       font-weight: $fw-medium;
       color: $secondary;
     }
+
+    @include skillItems($skills);
   }
 
   .about {
@@ -148,6 +151,19 @@ body {
 
       .icon-social {
         margin-right: 8px;
+      }
+    }
+  }
+
+  .skills {
+    text-align: center;
+
+    &__body {
+      text-align: left;
+
+      @include breakpoint(md) {
+        max-width: 48rem;
+        margin: 0 auto;
       }
     }
   }

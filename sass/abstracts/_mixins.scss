@@ -21,3 +21,25 @@ $breakpoint-xl: 80rem;
     }
   }
 }
+
+@mixin skillItems($args) {
+  @each $name, $value in $args {
+    .#{$name} {
+      display: block;
+      background-color: $crimson;
+      width: $value * 1%;
+      height: 100%;
+      border-radius: inherit;
+      animation: $name $value * 0.01s ease-in-out 0.1s;
+    }
+
+    @keyframes #{$name} {
+      from {
+        width: 0;
+      }
+      to {
+        width: $value;
+      }
+    }
+  }
+}

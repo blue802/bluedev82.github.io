@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     delay: 400,
   };
   ScrollReveal(optionsScroll);
-  ScrollReveal().reveal("section");
   ScrollReveal().reveal(".card");
+  ScrollReveal().reveal("#about");
+  ScrollReveal().reveal("#skills");
 
+  // typing animation
   var optionsTyped = {
     stringsElement: "#typedContent",
     typeSpeed: 100,
