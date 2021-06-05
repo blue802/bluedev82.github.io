@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Scroll animation
+  const optionsScroll = {
+    reset: true,
+    delay: 400,
+  };
+  ScrollReveal(optionsScroll);
+  ScrollReveal().reveal("section");
+  ScrollReveal().reveal(".card");
+
+  var optionsTyped = {
+    stringsElement: "#typedContent",
+    typeSpeed: 100,
+    backSpeed: 50,
+    backDelay: 1000,
+    smartBackspace: true,
+    showCursor: false,
+  };
+  var typed = new Typed("#typed", optionsTyped);
+
   const sidebar = document.querySelector(".sidebar");
   const btnBurger = document.querySelector("#btnBurger");
   const btnClose = document.querySelector("#btnClose");
